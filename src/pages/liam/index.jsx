@@ -41,24 +41,22 @@ export default function ArticlesIndex({ articles }) {
     const headline = 'Updates on Liam’s journey with Muenke Syndrome'
     return (
         <>
-    <NextSeo
-      title="Articles - Brian Ketelsen"
-      description={siteMeta.description}
-      canonical="https://brian.dev/liam"
-      openGraph={{
-        url: 'https://brian.dev/liam',
-        images: [
-          {
-            url: `https://og.brian.dev/api/og?title=Liam&desc=${headline}&imgUrl=https://brian.dev/fixed/images/IMG_7808.png`,
-            width: 1200,
-            height: 600,
-            alt: 'Og Image Alt',
-            type: 'image/jpeg',
-          }
-        ],
-        siteName: 'brian.dev',
-      }}
-    />
+            <NextSeo
+                title="FABS"
+                description="FABS is a Solana token. It's a story of how a bunch of curious Solana founders in a Villa with redbull created a token. Playbook is publicly available."
+                canonical="https://fabs.fun/"
+                openGraph={{
+                    url: 'https://fabs.fun',
+                    images: [
+                        {
+                            url: 'https://fabs.fun/fabs.jpg',
+                            width: 1200,
+                            height: 630,
+                            alt: 'FABS',
+                        }],
+                    siteName: 'fabs.fun',
+                }}
+            />
             <Container className="mt-16 sm:mt-32">
                 <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
                     <div className="lg:pl-20">
@@ -80,10 +78,10 @@ export default function ArticlesIndex({ articles }) {
 
                                 <div className="mt-6 space-y-7 text-lg prose dark:prose-invert text-zinc-600 dark:text-zinc-400">
                                     <p>
-                                    Liam was born on May 14, 2021. After an ultrasound, x-ray and CT scan, Liam was diagnosed with <a href="https://www.mayoclinic.org/diseases-conditions/craniosynostosis/symptoms-causes/syc-20354513">bicoronal craniosynostosis</a> at one month old. We didn’t know his craniosynostosis was caused by <a href="https://www.seattlechildrens.org/conditions/muenke-syndrome/">Muenke Syndrome</a> until Liam was six months old. 
-                                     Muenke Syndrome is characterized by craniosynostosis (the premature fusion of one or more skull sutures), hearing loss and developmental delays. 
-                                     Soon after the diagnosis, we met with our pediatric plastic surgeon and neurosurgeon to discuss how they were going to correct Liam’s craniosynostosis. 
-                                     The biggest concern with any craniosynostosis diagnosis is the lack of room for a child’s brain to grow. It can eventually cause seizures, developmental delays and other complications including death.
+                                        Liam was born on May 14, 2021. After an ultrasound, x-ray and CT scan, Liam was diagnosed with <a href="https://www.mayoclinic.org/diseases-conditions/craniosynostosis/symptoms-causes/syc-20354513">bicoronal craniosynostosis</a> at one month old. We didn’t know his craniosynostosis was caused by <a href="https://www.seattlechildrens.org/conditions/muenke-syndrome/">Muenke Syndrome</a> until Liam was six months old.
+                                        Muenke Syndrome is characterized by craniosynostosis (the premature fusion of one or more skull sutures), hearing loss and developmental delays.
+                                        Soon after the diagnosis, we met with our pediatric plastic surgeon and neurosurgeon to discuss how they were going to correct Liam’s craniosynostosis.
+                                        The biggest concern with any craniosynostosis diagnosis is the lack of room for a child’s brain to grow. It can eventually cause seizures, developmental delays and other complications including death.
                                     </p>
 
                                 </div>

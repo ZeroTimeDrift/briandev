@@ -18,28 +18,26 @@ function LinkIcon(props) {
 
 export default function Projects() {
   const headline = "Things I’ve made trying to put my mark on the universe."
-  const intro="I’ve worked on tons of little projects over the years, but these are some of the ones that I’m most proud of. If you see something that piques your interest, check it out via the link below. While you're there, feel free to contribute any ideas that would make it better. Remember: Open source!"
+  const intro = "I’ve worked on tons of little projects over the years, but these are some of the ones that I’m most proud of. If you see something that piques your interest, check it out via the link below. While you're there, feel free to contribute any ideas that would make it better. Remember: Open source!"
 
   return (
     <>
-    <NextSeo
-      title="Projects - Brian Ketelsen"
-      description={siteMeta.description}
-      canonical="https://brian.dev/projects"
-      openGraph={{
-        url: 'https://brian.dev/projects',
-        images: [
-          {
-            url: `https://og.brian.dev/api/og?title=Projects&desc=${headline}`,
-            width: 1200,
-            height: 600,
-            alt: 'Og Image Alt',
-            type: 'image/jpeg',
-          }
-        ],
-        siteName: 'brian.dev',
-      }}
-    />
+      <NextSeo
+        title="FABS"
+        description="FABS is a Solana token. It's a story of how a bunch of curious Solana founders in a Villa with redbull created a token. Playbook is publicly available."
+        canonical="https://fabs.fun/"
+        openGraph={{
+          url: 'https://fabs.fun',
+          images: [
+            {
+              url: 'https://fabs.fun/fabs.jpg',
+              width: 1200,
+              height: 630,
+              alt: 'FABS',
+            }],
+          siteName: 'fabs.fun',
+        }}
+      />
       <SimpleLayout
         title={headline}
         intro={intro}

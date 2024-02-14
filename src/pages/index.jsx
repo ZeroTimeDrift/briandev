@@ -220,21 +220,19 @@ export default function Home({ articles }) {
     <>
 
       <NextSeo
-        title="Brian Ketelsen"
-        description={siteMeta.description}
-        canonical="https://brian.dev/"
+        title="FABS"
+        description="FABS is a Solana token. It's a story of how a bunch of curious Solana founders in a Villa with redbull created a token. Playbook is publicly available."
+        canonical="https://fabs.fun/"
         openGraph={{
-          url: 'https://brian.dev',
+          url: 'https://fabs.fun',
           images: [
             {
-              url: `https://og.brian.dev/api/og?title=${siteMeta.title}&desc=${siteMeta.description}`,
+              url: 'https://fabs.fun/fabs.jpg',
               width: 1200,
-              height: 600,
-              alt: 'Og Image Alt',
-              type: 'image/jpeg',
-            }
-          ],
-          siteName: 'brian.dev',
+              height: 630,
+              alt: 'FABS',
+            }],
+          siteName: 'fabs.fun',
         }}
       />
 
