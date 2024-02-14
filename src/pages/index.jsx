@@ -258,7 +258,7 @@ export default function Home({ articles }) {
           {/* <p className="mt-6 prose dark:prose-invert">
             Poke around and see what I’m up to. It’s all open source, so feel free to contribute.
           </p> */}
-          <div className="mt-6 flex gap-6">
+          {/* <div className="mt-6 flex gap-6">
             <SocialLink
               href={siteMeta.author.twitter}
               aria-label="Follow on Twitter"
@@ -286,7 +286,7 @@ export default function Home({ articles }) {
               aria-label="Follow on LinkedIn"
               icon={LinkedInIcon}
             />
-          </div>
+          </div> */}
         </div>
       </Container>
       <Photos />
