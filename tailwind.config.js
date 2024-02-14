@@ -19,6 +19,9 @@ module.exports = {
       '8xl': ['6rem', { lineHeight: '1' }],
       '9xl': ['8rem', { lineHeight: '1' }],
     },
+    /*   animation: {
+        'spin-slow': 'spin 3s linear infinite',
+      }, */
     typography: (theme) => ({
       invert: {
         css: {
@@ -89,11 +92,11 @@ module.exports = {
           // Base
           color: 'var(--tw-prose-body)',
           lineHeight: theme('lineHeight.7'),
-       /*   '> *': {
-            marginTop: theme('spacing.10'),
-            marginBottom: theme('spacing.10'),
-          },
-          */
+          /*   '> *': {
+               marginTop: theme('spacing.10'),
+               marginBottom: theme('spacing.10'),
+             },
+             */
           p: {
             marginTop: theme('spacing.7'),
             marginBottom: theme('spacing.7'),

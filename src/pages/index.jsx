@@ -19,12 +19,12 @@ import image2 from '@/images/photos/20150716-070618871-3.jpg'
 import image1 from '@/images/photos/bike.jpg'
 import image5 from '@/images/photos/band.jpg'
 import image4 from '@/images/photos/BW013.jpg'
-
+import dogcoin from '@/images/sticker.png'
 
 import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
 import { formatDate } from '@/lib/formatDate'
-import  siteMeta, {resume} from '@/data/siteMeta'
+import siteMeta, { resume } from '@/data/siteMeta'
 import { NextSeo } from 'next-seo';
 
 
@@ -165,9 +165,8 @@ function Resume() {
               <dt className="sr-only">Date</dt>
               <dd
                 className="ml-auto text-xs text-zinc-500 dark:text-zinc-500"
-                aria-label={`${role.start.label ?? role.start} until ${
-                  role.end.label ?? role.end
-                }`}
+                aria-label={`${role.start.label ?? role.start} until ${role.end.label ?? role.end
+                  }`}
               >
                 <time dateTime={role.start.dateTime ?? role.start}>
                   {role.start.label ?? role.start}
@@ -182,7 +181,7 @@ function Resume() {
         ))}
       </ol>
       <Button href="https://linkedin.com/in/brianketelsen" variant="secondary" className="group mt-6 w-full">
-               More on LinkedIn 
+        More on LinkedIn
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
     </div>
@@ -219,39 +218,46 @@ function Photos() {
 export default function Home({ articles }) {
   return (
     <>
-    <NextSeo
-      title="Brian Ketelsen"
-      description={siteMeta.description}
-      canonical="https://brian.dev/"
-      openGraph={{
-        url: 'https://brian.dev',
-        images: [
-          {
-            url: `https://og.brian.dev/api/og?title=${siteMeta.title}&desc=${siteMeta.description}`,
-            width: 1200,
-            height: 600,
-            alt: 'Og Image Alt',
-            type: 'image/jpeg',
-          }
-        ],
-        siteName: 'brian.dev',
-      }}
-    />
+
+      <NextSeo
+        title="Brian Ketelsen"
+        description={siteMeta.description}
+        canonical="https://brian.dev/"
+        openGraph={{
+          url: 'https://brian.dev',
+          images: [
+            {
+              url: `https://og.brian.dev/api/og?title=${siteMeta.title}&desc=${siteMeta.description}`,
+              width: 1200,
+              height: 600,
+              alt: 'Og Image Alt',
+              type: 'image/jpeg',
+            }
+          ],
+          siteName: 'brian.dev',
+        }}
+      />
+
       <Container className="mt-9">
+
         <div className="max-w-2xl text-lg">
-          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Cloud Advocate, hacker, and open source enthusiast.
+          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl uppercase text-center">
+            Our story
           </h1>
-          <p className="mt-6 prose dark:prose-invert">
-            I’m Brian, and I teach people how to use the Cloud. I’ve been active in Open Source for as long as I’ve been coding &mdash; and that’s a long time.
+          <p className="mt-6 prose dark:prose-invert text-xl font-bold text-center">
+            What happens when you mix a bunch of curious Solana founders in a Villa with a shit ton of redbull?
           </p>
-          <p className="mt-6 prose dark:prose-invert">
-            With some friends, I wrote a <a href="https://www.manning.com/books/go-in-action">book about the Go programming language</a>.
-             I’ve given many <Link href={"/speaking"} >talks</Link> about Go, Distributed Computing, and programming in general.
+          <Image src={dogcoin} width={250} height={250} className='items-center mx-auto my-4' />
+          <p className='text-thin items-center mx-auto text-center text-zinc-800 dark:text-zinc-100'>The birth of $FABS</p>
+          <p className="mt-6 prose dark:prose-invert text-center">
+
+            The purpose of a playbook for launching a Solana token is to provide a detailed guide for indi- viduals or teams looking to create and launch their own cryptocurrency on the Solana blockchain. This playbook serves as a roadmap, offering step-by-step instructions, best practices, and consid- erations to ensure a successful token launch. It covers various aspects of the process, including marketing strategies, mistakes to learn from and post-launch support. By following this playbook, creators can navigate the complexities of token creation and launch with confidence, ultimately maximizing their chances of achieving their project goals and fostering community engagement and adoption.
+
+
           </p>
-          <p className="mt-6 prose dark:prose-invert">
+          {/* <p className="mt-6 prose dark:prose-invert">
             Poke around and see what I’m up to. It’s all open source, so feel free to contribute.
-          </p>
+          </p> */}
           <div className="mt-6 flex gap-6">
             <SocialLink
               href={siteMeta.author.twitter}
@@ -284,7 +290,7 @@ export default function Home({ articles }) {
         </div>
       </Container>
       <Photos />
-      <Container className="mt-24 md:mt-28">
+      {/* <Container className="mt-24 md:mt-28">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
           <div className="flex flex-col gap-16">
             {articles.map((article) => (
@@ -296,7 +302,7 @@ export default function Home({ articles }) {
             <Resume />
           </div>
         </div>
-      </Container>
+      </Container> */}
     </>
   )
 }

@@ -21,14 +21,14 @@ export function Footer() {
           <Container.Inner>
             <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
               <div className="flex gap-6 text-sm font-medium text-zinc-800 dark:text-zinc-200">
-                <NavLink href="/about">About</NavLink>
-                <NavLink href="/projects">Projects</NavLink>
+                <NavLink href="https://t.me/FABSonSOL">Telegram</NavLink>
+                {/* <NavLink href="/projects">Projects</NavLink>
                 <NavLink href="/speaking">Speaking</NavLink>
-                <NavLink href="/uses">Uses</NavLink>
-                <NavLink href="/liam">Liam</NavLink>
+                <NavLink href="/uses">Uses</NavLink> */}
+                <NavLink href="#">Playbook</NavLink>
               </div>
               <p className="text-sm text-zinc-600 dark:text-zinc-300">
-                  &copy; {new Date().getFullYear()} {siteMeta.copyright} 
+                &copy; {new Date().getFullYear()} Founders wif Abs DAO
               </p>
             </div>
           </Container.Inner>
