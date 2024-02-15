@@ -1,7 +1,7 @@
 import Image from 'next/future/image'
 import Link from 'next/link'
 import clsx from 'clsx'
-
+import React, { useEffect } from 'react';
 import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
@@ -27,7 +27,23 @@ import { formatDate } from '@/lib/formatDate'
 import siteMeta, { resume } from '@/data/siteMeta'
 import { NextSeo } from 'next-seo';
 
+const JupiterInitComponent = () => {
+  useEffect(() => {
+    window.Jupiter.init({
+      displayMode: "integrated",
+      integratedTargetId: "integrated-terminal",
+      endpoint: "https://mainnet.helius-rpc.com/?api-key=5f369acb-23ca-4592-8b47-98d9ca1f4334",
+      strictTokenList: false,
+      formProps: {
+        fixedOutputMint: true,
+        initialAmount: "1000",
+        initialOutputMint: "ErbakSHZWeLnq1hsqFvNz8FvxSzggrfyNGB6TEGSSgNE",
+      },
+    });
+  }, []); // Empty dependency array ensures the effect runs only once
 
+  return <div id="integrated-terminal" />;
+};
 function MailIcon(props) {
   return (
     <svg
@@ -218,6 +234,7 @@ function Photos() {
 export default function Home({ articles }) {
   return (
     <>
+      <script src='https://terminal.jup.ag/main-v2.js' />
 
       <NextSeo
         title="FABS"
@@ -246,13 +263,16 @@ export default function Home({ articles }) {
             What happens when you mix a bunch of curious Solana founders in a Villa with a shit ton of redbull?
           </p>
           <Image src={dogcoin} width={250} height={250} className='items-center mx-auto my-4' />
-          <p className='text-thin items-center mx-auto text-center text-zinc-800 dark:text-zinc-100'>The birth of $FABS</p>
-          <p className="mt-6 prose dark:prose-invert text-center">
+          <p className='text-thin items-center mx-auto text-center text-zinc-800 dark:text-zinc-100' >The birth of $FABS</p>
+
+          <p className="mt-6 prose dark:prose-invert text-center mb-4">
 
             The purpose of a playbook for launching a Solana token is to provide a detailed guide for indi- viduals or teams looking to create and launch their own cryptocurrency on the Solana blockchain. This playbook serves as a roadmap, offering step-by-step instructions, best practices, and consid- erations to ensure a successful token launch. It covers various aspects of the process, including marketing strategies, mistakes to learn from and post-launch support. By following this playbook, creators can navigate the complexities of token creation and launch with confidence, ultimately maximizing their chances of achieving their project goals and fostering community engagement and adoption.
 
 
           </p>
+          <p className="mt-6 prose dark:prose-invert text-center mb-4 text-4xl text-bold">FABS before ABS</p>
+          <JupiterInitComponent />
           {/* <p className="mt-6 prose dark:prose-invert">
             Poke around and see what I’m up to. It’s all open source, so feel free to contribute.
           </p> */}

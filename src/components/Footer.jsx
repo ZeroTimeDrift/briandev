@@ -22,9 +22,8 @@ export function Footer() {
             <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
               <div className="flex gap-6 text-sm font-medium text-zinc-800 dark:text-zinc-200">
                 <NavLink href="https://t.me/FABSonSOL">Telegram</NavLink>
-                {/* <NavLink href="/projects">Projects</NavLink>
-                <NavLink href="/speaking">Speaking</NavLink>
-                <NavLink href="/uses">Uses</NavLink> */}
+                <NavLink href="https://birdeye.so/token/ErbakSHZWeLnq1hsqFvNz8FvxSzggrfyNGB6TEGSSgNE?chain=solana">BirdEye</NavLink>
+                <NavLink href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=ErbakSHZWeLnq1hsqFvNz8FvxSzggrfyNGB6TEGSSgNE&fixed=in">Raydium</NavLink>
                 <NavLink href="#">Playbook</NavLink>
               </div>
               <p className="text-sm text-zinc-600 dark:text-zinc-300">
