@@ -5,6 +5,8 @@ import React, { useEffect } from 'react';
 import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
+import Script from 'next/script'
+
 import {
   TwitterIcon,
   InstagramIcon,
@@ -234,7 +236,7 @@ function Photos() {
 export default function Home({ articles }) {
   return (
     <>
-      <script src='https://terminal.jup.ag/main-v2.js' />
+      <Script src='https://terminal.jup.ag/main-v2.js' />
 
       <NextSeo
         title="FABS"
