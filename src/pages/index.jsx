@@ -31,17 +31,25 @@ import { NextSeo } from 'next-seo';
 
 const JupiterInitComponent = () => {
   useEffect(() => {
-    window.Jupiter.init({
-      displayMode: "integrated",
-      integratedTargetId: "integrated-terminal",
-      endpoint: "https://mainnet.helius-rpc.com/?api-key=5f369acb-23ca-4592-8b47-98d9ca1f4334",
-      strictTokenList: false,
-      formProps: {
-        fixedOutputMint: true,
-        initialAmount: "1000",
-        initialOutputMint: "ErbakSHZWeLnq1hsqFvNz8FvxSzggrfyNGB6TEGSSgNE",
-      },
-    });
+    const checkJupiterAvailability = () => {
+      if (window.Jupiter) {
+        window.Jupiter.init({
+          displayMode: "integrated",
+          integratedTargetId: "integrated-terminal",
+          endpoint: "https://mainnet.helius-rpc.com/?api-key=5f369acb-23ca-4592-8b47-98d9ca1f4334",
+          strictTokenList: false,
+          formProps: {
+            fixedOutputMint: true,
+            initialAmount: "1000",
+            initialOutputMint: "ErbakSHZWeLnq1hsqFvNz8FvxSzggrfyNGB6TEGSSgNE",
+          },
+        });
+      } else {
+        setTimeout(checkJupiterAvailability, 100); // Check again after 100 milliseconds
+      }
+    };
+
+    checkJupiterAvailability();
   }, []); // Empty dependency array ensures the effect runs only once
 
   return <div id="integrated-terminal" />;
