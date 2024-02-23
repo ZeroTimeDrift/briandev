@@ -33,15 +33,23 @@ const JupiterInitComponent = () => {
   useEffect(() => {
     const checkJupiterAvailability = () => {
       if (window.Jupiter) {
+
+const PLATFORM_FEE_AND_ACCOUNTS = {
+  referralAccount: "GoMK8MuwU6wSRL4wCCLFRns6iByXEchzRArFGsUYDyjQ",
+  feeBps: 100,
+};
+
         window.Jupiter.init({
           displayMode: "integrated",
           integratedTargetId: "integrated-terminal",
-          endpoint: "https://mainnet.helius-rpc.com/?api-key=5f369acb-23ca-4592-8b47-98d9ca1f4334",
+          endpoint: "https://mainnet.helius-rpc.com/?api-key=9dfe49c7-1235-40f7-8d5d-dfe2fb94ece7",
           strictTokenList: false,
           formProps: {
             fixedOutputMint: true,
-            initialAmount: "1000",
+            initialAmount: "100000000",
+            initialInputMint: "So11111111111111111111111111111111111111112",
             initialOutputMint: "ErbakSHZWeLnq1hsqFvNz8FvxSzggrfyNGB6TEGSSgNE",
+            platformFeeAndAccounts: PLATFORM_FEE_AND_ACCOUNTS,
           },
         });
       } else {
