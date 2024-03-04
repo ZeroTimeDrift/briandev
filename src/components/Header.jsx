@@ -123,9 +123,9 @@ function MobileNavigation(props) {
             <nav className="mt-6">
               <ul className="-my-2 divide-y divide-zinc-100 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
                 <MobileNavItem href="https://t.me/FABSonSOL">Telegram</MobileNavItem>
-
                 <MobileNavItem href="https://birdeye.so/token/ErbakSHZWeLnq1hsqFvNz8FvxSzggrfyNGB6TEGSSgNE?chain=solana">BirdEye</MobileNavItem>
                 <MobileNavItem href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=ErbakSHZWeLnq1hsqFvNz8FvxSzggrfyNGB6TEGSSgNE&fixed=in">Raydium</MobileNavItem>
+                <MobileNavItem href="https://t.me/addstickers/FABSonSOL">Stickers</MobileNavItem>
                 <MobileNavItem href="#">Playbook</MobileNavItem>
               </ul>
             </nav>
@@ -143,6 +143,7 @@ function NavItem({ href, children }) {
     <li>
       <Link
         href={href}
+        target='_blank'
         className={clsx(
           'relative block px-3 py-2 transition',
           isActive
@@ -166,7 +167,8 @@ function DesktopNavigation(props) {
         <NavItem href="https://t.me/FABSonSOL">Telegram</NavItem>
         <NavItem href="https://birdeye.so/token/ErbakSHZWeLnq1hsqFvNz8FvxSzggrfyNGB6TEGSSgNE?chain=solana">BirdEye</NavItem>
         <NavItem href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=ErbakSHZWeLnq1hsqFvNz8FvxSzggrfyNGB6TEGSSgNE&fixed=in">Raydium</NavItem>
-        <NavItem href="#">Playbook</NavItem>
+        <NavItem href="https://t.me/addstickers/FABSonSOL">Stickers</NavItem>
+        <NavItem onClick={()=>{alert('Coming Soon!')}} href="#">Playbook</NavItem>
       </ul>
     </nav>
   )
