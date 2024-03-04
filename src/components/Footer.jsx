@@ -24,6 +24,7 @@ export function Footer() {
                 <NavLink href="https://t.me/FABSonSOL">Telegram</NavLink>
                 <NavLink href="https://birdeye.so/token/ErbakSHZWeLnq1hsqFvNz8FvxSzggrfyNGB6TEGSSgNE?chain=solana">BirdEye</NavLink>
                 <NavLink href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=ErbakSHZWeLnq1hsqFvNz8FvxSzggrfyNGB6TEGSSgNE&fixed=in">Raydium</NavLink>
+                <NavLink href="https://t.me/stickers/FABSonSOL">Stickers</NavLink>
                 <NavLink href="#">Playbook</NavLink>
               </div>
               <p className="text-sm text-zinc-600 dark:text-zinc-300">
